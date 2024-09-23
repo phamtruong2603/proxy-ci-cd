@@ -13,6 +13,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    timeout-minutes: 30  # Tăng giới hạn thời gian chạy lên 30 phút
 
     strategy:
       matrix:
