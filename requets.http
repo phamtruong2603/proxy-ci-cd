@@ -1,0 +1,44 @@
+POST http://10.207.112.106:8087/wms-service/service/homeService/addDeliveryBill
+content-type: application/json
+
+{
+      "data": {
+        "synStockTransDto": {
+          "description": "",
+          "stockCode": "TCTCT_HNI_HS",
+          "stockId": 4502543,
+          "stockName": "Kho CNKT HNI - Home Service",
+          "type": "30"
+        },
+        "lstStockTransDetail": [
+          {
+            "amount": 1,
+            "applyPrice": null,
+            "goodsCode": "270789_CN",
+            "goodsId": null,
+            "goodsName": "Thẻ nhớ Micro SD + Adaptor chưa ghi hiệu Hikvision mã HS-TF-C1/32GB"
+          },
+          {
+            "amount": 1,
+            "applyPrice": null,
+            "goodsCode": "270637_CN",
+            "goodsId": 80001373,
+            "goodsName": "Camera quan sát CS-CV246 (B0-1C1WFR)"
+          }
+        ],
+        "sysUserRequest": {
+          "sysUserId": 19244,
+          "departmentId": 9008038
+        }
+      }
+    }
+
+###
+POST http://10.207.112.106:8087/wms-service/service/homeService/getStockExport
+content-type: application/json
+
+{
+  "departmentId": 9008038,
+  "sysUserId": 19244,
+  "stockType": "30"
+}
